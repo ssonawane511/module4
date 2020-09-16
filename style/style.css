@@ -1,0 +1,102 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  box-sizing: border-box;
+}
+#wrapper {
+  display: flex;
+  background-color: #f5f5fb;
+}
+/* due all div in wrapper and wrapper have display flex property all 
+lefrt main right conatiner are  comming in same line  */
+.leftside {
+  display: flex;
+  /* justify-content: center; */
+  max-width: 300px;
+  padding: 20px;
+  background-color: #ffff;
+  /* align-items: center; */
+  /* justify content and align-items: center;  causing the 
+  left side bar content to middel to commented it out */ 
+}
+
+.leftside img {
+  margin-top: 70px !important;
+  border-radius: 50%;
+  width: 120px;
+  margin: 0px auto;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.051);
+  /* for img this add the shadow ==> rgba(0,0,0means black and last is opacity 
+  percentage 1 = 100% */
+}
+
+.leftside ul {
+  text-align: center;
+}
+
+.leftside ul li {
+  list-style: none;
+}
+
+.leftside h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.leftside .nav__email {
+  color: #ccc;
+}
+.nav__menuitem {
+  margin-top: 20px;
+}
+
+.nav__menuitem a {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.575);
+  text-decoration: none;
+}
+
+.nav__menuitem a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.active a {
+  color: rgb(0, 0, 0);
+}
+
+.nav__footer {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  margin: 0px auto;
+  background-color: #f5f5fb;
+  height: 200px;
+  padding: 25px;
+  color: #0a5ad1;
+}
+
+.btn__color {
+  background-color: #5e81f4 !important;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.main {
+  flex: 1;
+  height: 100vh;
+}
+/* flex 1 to main content make it superior 
+and take all the available space so ye middle ki sab space le leta hai 
+and right side bar ko last me push krta hai */
+
+.rightside {
+  max-width: 300px;
+  width: 100%;
+  background-color: #fff;
+}
+/* this is right side bar jski width hai 300px */
