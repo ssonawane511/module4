@@ -1,0 +1,243 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  box-sizing: border-box;
+}
+#wrapper {
+  display: flex;
+  background-color: #f5f5fb;
+}
+/* due all div in wrapper and wrapper have display flex property all 
+lefrt main right conatiner are  comming in same line  */
+.leftside {
+  display: flex;
+  /* justify-content: center; */
+  max-width: 300px;
+  padding: 20px;
+  background-color: #ffff;
+  /* align-items: center; */
+  /* justify content and align-items: center;  causing the 
+  left side bar content to middel to commented it out */
+}
+
+.leftside .propfile_img {
+  margin-top: 70px !important;
+  border-radius: 50%;
+  width: 120px;
+  margin: 0px auto;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.051);
+  /* for img this add the shadow ==> rgba(0,0,0means black and last is opacity 
+  percentage 1 = 100% */
+}
+
+.leftside ul {
+  text-align: center;
+}
+
+.leftside ul li {
+  text-align: left;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.leftside h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.leftside .nav__email {
+  color: #ccc;
+}
+.nav__menuitem {
+  margin-top: 20px;
+}
+
+.nav__menuitem a {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.575);
+  text-decoration: none;
+}
+
+.nav__menuitem a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.active a {
+  color: rgb(0, 0, 0);
+}
+
+.nav__footer {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  margin: 0px auto;
+  background-color: #f5f5fb;
+  height: 200px;
+  padding: 25px;
+  color: #0a5ad1;
+}
+
+.btn__color {
+  background-color: #5e81f4 !important;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.main {
+  flex: 1;
+  height: 100vh;
+  padding: 40px;
+}
+/* flex 1 to main content make it superior 
+and take all the available space so ye middle ki sab space le leta hai 
+and right side bar ko last me push krta hai */
+
+.rightside {
+  max-width: 300px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+/* this is right side bar jski width hai 300px */
+.rightside .nav {
+  align-items: center;
+}
+.rightside .music_player {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+.music_player h1 {
+  margin-top: 30px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+}
+
+.music_player span {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.rightside img {
+  width: 150px;
+  height: 150px;
+  margin-top: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid rgba(0, 110, 255, 0.212);
+}
+
+.controller .fa {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.animate {
+  animation: rotateplayer 5s linear infinite;
+}
+
+@keyframes rotateplayer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.controller {
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.controller .fa {
+  font-size: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.controller .fa:hover {
+  color: rgba(60, 0, 255, 0.514);
+  font-size: 30px;
+}
+
+.input_contain {
+  max-width: 400px;
+  margin-top: 50px;
+}
+
+.input_button {
+  border: 1px solid #ccc;
+  border-right: 0px;
+  border-radius: 10px 0 0 10px !important;
+  background-color: #fff;
+}
+.input_button .fa {
+  color: #ccc;
+}
+
+.input_field {
+  border-radius: 0px 10px 10px 0px !important;
+  border-left: 0px;
+}
+
+.input_field::placeholder {
+  color: #ccc;
+}
+
+.song {
+  background-color: #fff;
+  padding: 2px 30px;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.song:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+.song span {
+  padding: 0px 10px;
+}
+.song img {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.song .song_number {
+  font-size: 50px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  opacity: 50%;
+}
+
+.song_name {
+  font-weight: 700;
+  flex: 1;
+  text-align: center;
+}
+
+.song .fa {
+  color: red;
+}
+
+.musicImg {
+  transition: all 0.5s ease-in-out;
+}
+.musicImg:hover {
+  transform: translateY(-5px);
+  border-color: rgba(60, 0, 255, 0.39);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
