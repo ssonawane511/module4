@@ -1,139 +1,349 @@
 /** @format */
 
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  box-sizing: border-box;
-}
 #wrapper {
   display: flex;
-  background-color: #f5f5fb;
+  font-family: "Inter", sans-serif;
 }
-/* due all div in wrapper and wrapper have display flex property all 
-lefrt main right conatiner are  comming in same line  */
-.leftside {
+.leftside .nav {
   display: flex;
-  /* justify-content: center; */
-  max-width: 300px;
-  padding: 20px;
-  background-color: #ffff;
-  /* align-items: center; */
-  /* justify content and align-items: center;  causing the 
-  left side bar content to middel to commented it out */
+  flex-direction: column;
+
+  background-color: white;
+  height: 100%;
+  padding: 50px 40px 0px;
 }
 
-.leftside .propfile_img {
-  margin-top: 70px !important;
-  border-radius: 50%;
-  width: 120px;
-  margin: 0px auto;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.051);
-  /* for img this add the shadow ==> rgba(0,0,0means black and last is opacity 
-  percentage 1 = 100% */
+.leftside .sidebar {
+  width: 272px;
+  min-height: 100vh;
 }
 
-.leftside ul {
+.leftside .nav__btn {
+  border: 0px;
+  margin: 48px 0px;
+  background-color: #5e81f4;
+  color: white;
   text-align: center;
-}
-
-.leftside ul li {
-  text-align: left;
-  list-style: none;
-  padding-left: 20px;
-}
-
-.leftside h3 {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-.leftside .nav__email {
-  color: #ccc;
-}
-.nav__menuitem {
-  margin-top: 20px;
-}
-
-.nav__menuitem a {
-  font-size: 20px;
+  padding: 14px 35px;
+  border-radius: 10px;
+  font-family: Inter;
+  font-style: normal;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.575);
-  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
 }
 
-.nav__menuitem a:hover {
-  color: rgb(0, 0, 0);
+.leftside .nav__menuList {
+  margin-bottom: 30px;
+  padding-left: 15%;
+  cursor: pointer;
 }
 
-.active a {
-  color: rgb(0, 0, 0);
+.leftside .nav__menuList span {
+  font-weight: 500;
+  margin-left: 25px;
+  font-size: 16px;
+  color: #8da1b5;
+  line-height: 19px;
+  transition: all 0.5s ease-in-out;
+}
+.leftside .nav__menuList span:hover {
+  color: #272829 !important;
 }
 
-.nav__footer {
-  position: absolute;
-  bottom: 50px;
-  text-align: center;
-  margin: 0px auto;
+.leftside .nav__menuList__active {
+  font-weight: 700;
+  color: #272829 !important;
+}
+
+.leftside .nav__footer {
   background-color: #f5f5fb;
-  height: 200px;
-  padding: 25px;
+  border-radius: 12px;
+  height: 232px;
+  margin-top: 70px;
+  padding: 24px;
+}
+
+.leftside .nav__footer p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
   color: #0a5ad1;
 }
 
-.btn__color {
-  background-color: #5e81f4 !important;
-  color: #fff !important;
+.leftside .nav__footer__img {
+  text-align: center;
+}
+
+.leftside .nav__footer__img img {
+  margin-top: -70px;
+  margin-bottom: 33px;
+}
+
+.leftside .nav__profile {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.246);
+}
+.navbar-Album_title {
+  display: flex;
+  flex-direction: column;
+}
+
+#content-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5fb;
+  padding: 40px;
+  padding-top: 48px;
+  flex: 1;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45px;
+}
+.input-group {
+  display: flex;
+}
+
+.input-group-append .btn {
+  background-color: #fff;
+  border-radius: 10px 0 0 10px !important;
+  padding: 10px;
+  padding-left: 23px !important;
+  color: #ccd6e8;
+}
+.input-group-append .btn:focus {
+  outline: 0 !important;
+}
+
+.content__input {
+  padding: 15px 0px !important;
+  border-radius: 0 10px 10px 0;
+  border: 0px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: #747b88;
+  width: 100%;
+  max-width: 470px;
+  flex: 1;
+}
+
+.content__input::placeholder {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+
+  color: #ccd6e8;
+}
+
+.content__input:focus {
+  outline: none;
+}
+
+.header:focus {
+  border-color: blue;
+}
+
+.header__notification {
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+
+  color: #011f3b;
+}
+
+.main__navlink {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  transition: color 0.5s;
+}
+
+.main__navlinkactive {
+  color: #5e81f4 !important;
+}
+.main__navlinkdisabled {
+  color: rgba(118, 132, 146, 0.8);
+}
+
+.main__navlink:hover {
+  color: #5e81f4;
+}
+.playlist {
+  display: flex;
+  flex-wrap: nowrap !important;
+  overflow: scroll;
+}
+.playlist::-webkit-scrollbar {
+  display: none;
+}
+.music {
+  max-width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.music:hover {
+  transform: translateY(-5px);
+}
+.music img {
+  width: 100%;
+  min-width: 250px;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.253);
+}
+.music img:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.473);
+}
+.music h6 {
+  color: black;
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+.music span {
+  margin-top: 1px;
+  font-size: 13px;
+}
+
+.lsit_items {
+  margin: 20px 0px;
+}
+
+.lsit_items .item {
+  display: flex;
+  cursor: pointer;
+
+  align-items: center;
+  margin: 10px 10px;
+  background-color: #fff;
+  padding: 5px 50px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 0.5rem 0 rgba(58, 42, 42, 0.144);
+}
+.lsit_items .item h1 {
+  opacity: 25%;
+  text-align: center;
+  align-self: center;
+}
+
+.lsit_items .item span {
+  margin: 0 10px;
+}
+.lsit_items .item:hover {
+  background-color: rgba(0, 0, 0, 0.89);
+  color: #fff;
+}
+.lsit_items .item .fa.fa-heart-o {
+  color: red;
+  border: 10px;
+}
+.lsit_items .item .fa.fa-heart-o :hover {
+  background-color: red;
+}
+.lsit_items .item img {
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
 }
 
-.main {
-  flex: 1;
-  height: 100vh;
-  padding: 40px;
-}
-/* flex 1 to main content make it superior 
-and take all the available space so ye middle ki sab space le leta hai 
-and right side bar ko last me push krta hai */
-
-.rightside {
-  max-width: 300px;
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-}
-/* this is right side bar jski width hai 300px */
 .rightside .nav {
-  align-items: center;
-}
-.rightside .music_player {
   display: flex;
   flex-direction: column;
-  align-items: center !important;
+
+  background-color: white;
+  height: 100%;
+  padding: 50px 40px 0px;
 }
-.music_player h1 {
-  margin-top: 30px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+
+.rightside .sidebar {
+  width: 384px;
+  min-height: 100vh;
+}
+
+#music_title {
+  flex: 1;
+  text-align: right;
+}
+.music_player {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.music_player img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid rgba(0, 0, 255, 0.336);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.music_player img:hover {
+  border: 10px solid rgba(0, 0, 255, 0.575);
+}
+
+.controler {
+  padding: 0 50px;
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around !important;
+}
+
+.controler .fa {
+  font-size: 25px;
+  align-self: center;
+  justify-content: center;
+  color: #777;
+  filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+
+  padding: 10px;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.controler .fa:hover {
+  transform: translateY(-2px);
+  color: rgba(0, 0, 255, 0.856);
+}
+
+.music_player h2 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
+  font-weight: 700;
+  margin-bottom: 05px;
 }
 
 .music_player span {
-  margin-top: 10px;
+  margin-top: 0px;
   color: #ccc;
-}
-
-.rightside img {
-  width: 150px;
-  height: 150px;
-  margin-top: 70px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 8px solid rgba(0, 110, 255, 0.212);
-}
-
-.controller .fa {
-  margin-top: 20px;
-  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .animate {
@@ -148,96 +358,15 @@ and right side bar ko last me push krta hai */
     transform: rotate(360deg);
   }
 }
-
-.controller {
-  padding: 0px 50px;
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 50px;
-  align-items: center;
-}
-.controller .fa {
-  font-size: 25px;
-  transition: all 0.2s ease-in-out;
+.alert {
+  display: none;
 }
 
-.controller .fa:hover {
-  color: rgba(60, 0, 255, 0.514);
-  font-size: 30px;
-}
-
-.input_contain {
-  max-width: 400px;
-  margin-top: 50px;
-}
-
-.input_button {
-  border: 1px solid #ccc;
-  border-right: 0px;
-  border-radius: 10px 0 0 10px !important;
-  background-color: #fff;
-}
-.input_button .fa {
-  color: #ccc;
-}
-
-.input_field {
-  border-radius: 0px 10px 10px 0px !important;
-  border-left: 0px;
-}
-
-.input_field::placeholder {
-  color: #ccc;
-}
-
-.song {
-  background-color: #fff;
-  padding: 2px 30px;
-  margin: 10px 0px;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-}
-.song:hover {
-  background-color: #000;
-  color: #fff !important;
-}
-.song span {
-  padding: 0px 10px;
-}
-.song img {
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.song .song_number {
-  font-size: 50px;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-  opacity: 50%;
-}
-
-.song_name {
-  font-weight: 700;
-  flex: 1;
-  text-align: center;
-}
-
-.song .fa {
-  color: red;
-}
-
-.musicImg {
-  transition: all 0.5s ease-in-out;
-}
-.musicImg:hover {
-  transform: translateY(-5px);
-  border-color: rgba(60, 0, 255, 0.39);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+@media only screen and (max-width: 768px) {
+  .alert {
+    display: block;
+  }
+  #wrapper {
+    display: none;
+  }
 }

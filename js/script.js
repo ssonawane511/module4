@@ -1,25 +1,27 @@
 /** @format */
 
-let playbutton = document.getElementById("play");
-let music = document.getElementById("music");
-let musicImg = document.getElementById("musicImg");
+const play = document.getElementById("play");
+const image = document.getElementById("track_img");
+const music = document.getElementById("music");
+let isplaying = false;
 
-playbutton.addEventListener("click", playaudio);
-let musicplaying = false;
+const playMusic = () => {
+  music.play();
+  play.classList.replace("fa-play-circle-o", "fa-pause-circle-o");
+  image.classList.add("animate");
+  isplaying = true;
+};
 
-function playaudio() {
-  if (musicplaying == false) {
-    music.play();
-    musicplaying = true;
-    musicImg.classList.add("animate");
-    playbutton.classList.remove("fa-play-circle-o");
-    playbutton.classList.add("fa-pause-circle-o");
+const pauseMusic = () => {
+  music.pause();
+  play.classList.replace("fa-pause-circle-o", "fa-play-circle-o");
+  image.classList.remove("animate");
+  isplaying = false;
+};
+play.addEventListener("click", () => {
+  if (isplaying) {
+    pauseMusic();
   } else {
-    music.pause();
-    musicplaying = false;
-    musicImg.classList.remove("animate");
-
-    playbutton.classList.remove("fa-pause-circle-o");
-    playbutton.classList.add("fa-play-circle-o");
+    playMusic();
   }
-}
+});
